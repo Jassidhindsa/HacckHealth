@@ -1,0 +1,45 @@
+<html>
+<link href = "Signup.css" type = "text/css" rel = "stylesheet" />
+<head>
+	<title>
+		Sign Up
+	</title>
+</head>
+<body bgcolor="#32e692">
+	<div align="left">
+
+	</div>
+	<h1>Sign Up</h1>
+	<p>Please fill in this form to create an account.</p>
+<form action="connect.php" method="post" style="border:1px solid #ccc">
+			<label><b>Full Name (Required)<b></label>
+			<input type="text" name="name" placeholder="Enter Full Name" required>
+
+			<label><b>Gender (Optional)<b></label>
+			<input type="text" name="gender" placeholder="Enter Gender" optional>
+
+			<label><b>Email (Required)<b></label>
+			<input type="text" name="email" placeholder="Enter Email" required>
+
+			<label><b>Password (Required)<b></label>
+			<input type="password" name="password" placeholder="Enter Password" required>
+
+			<label><b>Emergency Contacts (Required)<b></label>
+			<input type="text" name="emergency_contacts" placeholder="Enter Relatives or Friends Contact Info" required>
+
+			<label><b>Medical Record (Required)<b></label>
+			<input type="text" name="medical_record" placeholder="Enter Personal and Family Health History" required>
+			
+			<label>
+				<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+			  </label>
+
+		<p>By creating an account, we promised to protect your privacy. </a></p>
+		
+		<div class="clearfix">
+			<button type="submit" name="save" value="Submit" class="signupbtn">Submit</button>
+			<button type="button" class="cancelbtn">Cancel</button>
+		  </div>
+</form>
+</body>
+</html>
