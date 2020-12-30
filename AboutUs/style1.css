@@ -1,0 +1,28 @@
+body{
+    background-image: url('https://hitinfrastructure.com/images/site/article_headers/_normal/hospital.jpg');
+    background-repeat: no-repeat;
+    background-size: 105.5%;
+
+
+
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+body{
+    height: 100vh;
+}
+.img-wrap{width:100%}
+.img-wrap img{width:700%;padding: 0px;border-radius:70%}
