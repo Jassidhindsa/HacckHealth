@@ -1,10 +1,11 @@
 <?php
-$server_name="127.0.0.1";
+
+$server_name="35.202.184.238";
 $username="root";
 $password="";
 $database_name="Hackathon";
 
-$conn=mysqli_connect($server_name,$username,$password,$database_name);
+$conn=mysqli_connect($server_name, $username, $password, $database_name);
 //now check the connection
 if(!$conn)
 {

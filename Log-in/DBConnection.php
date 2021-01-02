@@ -1,5 +1,5 @@
 <?php 
-    define('DB_SERVER', '127.0.0.1'); 
+    define('DB_SERVER', '35.202.184.238'); 
     define('DB_USERNAME', 'root');  
     define('DB_PASSWORD', ''); 
     define('DB_DATABASE', 'Hackathon');
