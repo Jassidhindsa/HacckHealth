@@ -1,22 +1,23 @@
 <?php
 
-include('DBConnection.php');
+include('db.php');
 
 $v1 = doubleval($_GET['lat']);
-$v2 = doubleval($_GET['lng']);
+$v2 = doubleval($_GET['long']);
 
-$sql = SELECT id, ( 3959 * acos( cos( radians($v1)) * cos ( radians(lat)) * cos( radians(lng) - radians($v2)) 
-+ sin( radians($v1)) * sin( radians(lat)))) AS distance FROM marjers HAVING distance < 25 ORDER BY distance LIMIT 0, 20;
+$sql = "SELECT id,name,distance ( 3959 * acos( cos( radians($v1)) * cos ( radians(lat)) * cos( radians(lng) - radians($v2)) 
++ sin( radians($v1)) * sin( radians(lat)))) AS distance FROM markers HAVING distance < 25 ORDER BY distance LIMIT 0, 20";
 
-$query = $dbh ->prepare($sql);
+$query = $connection ->prepare($sql);
 $query->execute();
-$results = $query -> fetch ALL(PDO::FETCH_OBJ);
+$results = $query->fetchALL(PDO::FETCH_OBJ);
+$cnt=1;
 
 if($query->rowCount() > 0) {
     foreach ($results as $result) {
         ?>
         
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -56,7 +57,6 @@ if($query->rowCount() > 0) {
     <td><?php echo htmlentities($result->id); ?></td>
     <td><?php echo htmlentities($result->name); ?></td>
     <td><?php echo htmlentities($result->distance); ?></td>
-    <td>Germany</td>
   </tr>
 </table>
 

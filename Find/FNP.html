@@ -5,7 +5,7 @@
 </head>
 <body onload = "getLocation()">
 
-      <script type="text/javascrupt">
+      <script type="text/javascript">
         function getLocation() {
           if(navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
@@ -15,26 +15,16 @@
 
         function showPosition(position) {
           document.getElementById("lats").value =+ position.coords.latitude;
-          document.getElementById("lats").value =+ position.coords.longitude;
+          document.getElementById("longs").value =+ position.coords.longitude;
         }
 
       </script>
 
-<form action = "DBConnection.php" method = "POST">
-      <input type="hidden" name="lats" id="lats">
-      <input type="hidden" name="longs" id="longs">
+<form action = "FNP_Subm.php" method = "POST" style="border:1px solid #ccc">
+<div><b>Latitude: </b><input type="text" name="lats" id="lats"></div>
+<div><b>Longitude: </b><input type="text" name="longs" id="longs"></div>
 
-<button class="button" type="submit" name="submit" id="submit">Find The Nearest Hospital Around Me</button>
-
-<?php
-
-    if(isset($_POST['submit'])) {
-        $l1 = $_POST['lat'];
-        $l2 = $_POST['longS'];
-
-        header("Location: FNP.php?/lat=$l1&long=$l2");
-    }
-?>
+<button class="button" type="submit" name="subm" id="subm">Find The Nearest Hospital Around Me</button>
 
 </body>
 </html>
