@@ -1,28 +1,47 @@
 body{
-    background-image: url('https://hitinfrastructure.com/images/site/article_headers/_normal/hospital.jpg');
-    background-repeat: no-repeat;
-    background-size: 105.5%;
-
-
-
+  background-image: url('https://hitinfrastructure.com/images/site/article_headers/_normal/hospital.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align:center;
+  margin:0px;
 }
-* {
-    box-sizing: border-box;
-  }
-  
-  .column {
-    float: left;
-    width: 33.33%;
-    padding: 5px;
-  }
-  
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-body{
-    height: 100vh;
+#title{
+padding:40px 3px 40px 6px; 
+color: #000000; 
+background-color: #f2f2f2; 
+border: #000000 2px solid;
+font-weight: bold;
+font-style: italic;
 }
-.img-wrap{width:100%}
-.img-wrap img{width:700%;padding: 0px;border-radius:70%}
+#subtitle{
+font-weight: bold;
+font-style: italic;
+}
+.row::after {
+content: "";
+clear: both;
+display: table;
+}
+.Text{
+background-color: #f2f2f2;
+border:1px solid black;
+}
+table{
+margin:auto;
+width:80%;
+padding:0px;
+}
+.column{
+padding:10px;
+}
+.big{
+  padding:10px;
+  width: 17%;
+  }
+img{
+width:100%;
+}
+image{
+  width: 100px;
+  height: 10px;
+}
