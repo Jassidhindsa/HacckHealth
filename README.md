@@ -1,5 +1,5 @@
-# HacckHealth Directions:
-1.Move three folders under the path of C:\xampp\htdocs
+# HacckHealth Directions (Local Sever):
+1.Move all folders under the path of C:\xampp\htdocs
 
 2.Start xampp software first, then its associated apache server, and MySQL database server
 
