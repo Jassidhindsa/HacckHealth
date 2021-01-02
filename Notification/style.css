@@ -32,6 +32,6 @@ textarea {
 button {
   float: right;
 }
-#name, #email {
+#name, #email,#relativeemail {
   width: 50%;
 }
