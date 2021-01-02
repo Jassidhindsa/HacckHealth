@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" type = "text/css" href="FNP.css"/>
+</head>
+<body onload = "getLocation()">
+
+      <script type="text/javascrupt">
+        function getLocation() {
+          if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+
+          }
+        }
+
+        function showPosition(position) {
+          document.getElementById("lats").value =+ position.coords.latitude;
+          document.getElementById("lats").value =+ position.coords.longitude;
+        }
+
+      </script>
+
+<form action = "DBConnection.php" method = "POST">
+      <input type="hidden" name="lats" id="lats">
+      <input type="hidden" name="longs" id="longs">
+
+<button class="button" type="submit" name="submit" id="submit">Find The Nearest Hospital Around Me</button>
+
+<?php
+
+    if(isset($_POST['submit'])) {
+        $l1 = $_POST['lat'];
+        $l2 = $_POST['longS'];
+
+        header("Location: FNP.php?/lat=$l1&long=$l2");
+    }
+?>
+
+</body>
+</html>
