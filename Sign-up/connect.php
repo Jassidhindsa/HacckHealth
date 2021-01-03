@@ -19,11 +19,12 @@ if(isset($_POST['save']))
 	$gender = $_POST['gender'];
 	$email = $_POST['email'];
     $password = $_POST['password'];
-	$emergency_contacts = $_POST['emergency_contacts'];
+	$emergency_contacts1 = $_POST['emergency_contacts1'];
+	$emergency_contacts2 = $_POST['emergency_contacts2'];
 	$medical_record = $_POST['medical_record'];
 
-	 $sql_query = "INSERT INTO register (name,gender,email,password,emergency_contacts,medical_record)
-	 VALUES ('$name','$gender','$email','$password','$emergency_contacts','$medical_record')";
+	 $sql_query = "INSERT INTO register (name,gender,email,password,emergency_contacts1,emergency_contacts2,medical_record)
+	 VALUES ('$name','$gender','$email','$password','$emergency_contacts1','$emergency_contacts2','$medical_record')";
 
 	 if (mysqli_query($conn, $sql_query)) 
 	 {
