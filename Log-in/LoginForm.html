@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>LoginForm.php</title>
+<div class="img_container"> 
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/000/604/480/small/2104-25.jpg" width="80" height="60" style="vertical-align:middle">
+</div>
+<link rel = "stylesheet" type = "text/css" href="LoginForm.css"/>
+</head>
+<body>
+ 
+
+<div style="text-align:center"><h1>Login Form</h1></div>
+<br>
+    <form name="login" method="post" action="Login.php" onsubmit="return validate();" >
+    <div><b>Username</b> <input type="text" name="email" placeholder="Enter Registered Email Address" required/> </div>
+    <div><b>Password</b> <input type="password" name="password" placeholder="Enter Password" required/> </div>
+    <div><input type="submit" value="Submit"></input> <input type="reset" value="Reset"></input></div>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> <b>Remember me
+    </label>
+    <div>
+      <span class="psw"> New User? <a href="http://localhost/sign-up/signupoutlook.html"> Sign Up </a> now </span>
+    </div>
+</form>
+</body>
+</html>

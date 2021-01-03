@@ -1,0 +1,65 @@
+body{
+    background-image: url('https://hitinfrastructure.com/images/site/article_headers/_normal/hospital.jpg');
+    background-repeat: no-repeat;
+    background-size: 82%;
+
+}
+.navigation-bar {
+    width: 80%; 
+    height: 80px; 
+    background-color: aquamarine;
+}
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 15px; 
+}
+.navigation-bar > a {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    height: 80px;        
+    line-height: 80px;    
+    
+}
+
+.right{
+    float:right;
+}
+
+.about{
+    float:right;
+    
+}
+
+.help{
+    float:right;
+    
+}
+
+.signup{
+    float:right;
+}
+
+.login{
+    float:right;
+}
+
+.home{
+    float:right;
+}
+
+.inbox{
+    float: right;
+    font-size: x-large;
+}
+
+.emergency{
+    float: left;
+    font-size: xx-large;
+     color: #333333;
+     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQhtix8w69UFt5mm-FQUJNMWWOjBmiDMNDXw&usqp=CAU');
+}
