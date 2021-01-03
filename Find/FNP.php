@@ -5,17 +5,17 @@ include('db.php');
 $v1 = doubleval($_GET['lat']);
 $v2 = doubleval($_GET['long']);
 
-$sql = "SELECT id,name,distance ( 3959 * acos( cos( radians($v1)) * cos ( radians(lat)) * cos( radians(lng) - radians($v2)) 
-+ sin( radians($v1)) * sin( radians(lat)))) AS distance FROM markers HAVING distance < 25 ORDER BY distance LIMIT 0, 20";
+$sql = "SELECT id, 3956 * 2 * ASIN(SQRT( POWER(SIN(( $lat - LatOnTable) *  pi()/180 / 2), 2) +COS( $lat * pi()/180) * COS(LatOnTable * pi()/180) * POWER(SIN(( $long - LongOnTable) * pi()/180 / 2), 2) ))) AS distance FROM markers HAVING distance < 25 ORDER BY distance LIMIT 0, 20";
 
-$query = $connection ->prepare($sql);
+$query = $db ->prepare($sql);
 $query->execute();
-$results = $query->fetchALL(PDO::FETCH_OBJ);
+$results = $query -> fetchALL(PDO::FETCH_OBJ);
 $cnt=1;
 
 if($query->rowCount() > 0) {
     foreach ($results as $result) {
-        ?>
+
+?>
         
 <!DOCTYPE html>
 <html>
