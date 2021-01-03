@@ -1,0 +1,38 @@
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+ 
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    cursor: pointer;
+}
+ 
+body{ 
+    background-image: url('https://hitinfrastructure.com/images/site/article_headers/_normal/hospital.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+form {
+    border: 10px #f1f1f1;
+}
+
+.img_container {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+span.psw {
+    float: left;
+    padding-top: 16px;
+}
